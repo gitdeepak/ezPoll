@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		771A1441163ED920003CB83B /* userDataAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 771A1440163ED920003CB83B /* userDataAccess.m */; };
+		77330DBD163E17490042CF43 /* ezPollUserEditTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77330DBC163E17490042CF43 /* ezPollUserEditTableController.m */; };
+		774BB4691655D24900F518A1 /* ezPollcreatePollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 774BB4681655D24900F518A1 /* ezPollcreatePollViewController.m */; };
+		777DDD7A163F6B86009A9647 /* ezPollAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 777DDD79163F6B86009A9647 /* ezPollAboutViewController.m */; };
+		77B5A3C3163E3C6E00990590 /* upperBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 77B5A3C2163E3C6E00990590 /* upperBackground.png */; };
+		77B5A3C8163E3D9200990590 /* LowerBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 77B5A3C7163E3D9200990590 /* LowerBackground.png */; };
+		77D19FFE163ED23000FBED30 /* saveButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 77D19FFD163ED23000FBED30 /* saveButton.png */; };
 		77F51006163DE7FC00E13C96 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77F51005163DE7FC00E13C96 /* UIKit.framework */; };
 		77F51008163DE7FC00E13C96 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77F51007163DE7FC00E13C96 /* Foundation.framework */; };
 		77F5100A163DE7FC00E13C96 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77F51009163DE7FC00E13C96 /* CoreGraphics.framework */; };
@@ -17,10 +24,35 @@
 		77F5101A163DE7FC00E13C96 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77F51019163DE7FC00E13C96 /* Default@2x.png */; };
 		77F5101C163DE7FC00E13C96 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77F5101B163DE7FC00E13C96 /* Default-568h@2x.png */; };
 		77F5101F163DE7FC00E13C96 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77F5101D163DE7FC00E13C96 /* MainStoryboard.storyboard */; };
-		77F51022163DE7FC00E13C96 /* ezPollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F51021163DE7FC00E13C96 /* ezPollViewController.m */; };
+		77F51022163DE7FC00E13C96 /* ezPollUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F51021163DE7FC00E13C96 /* ezPollUserViewController.m */; };
+		77F51029163DE80900E13C96 /* 114x114-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 77F51028163DE80900E13C96 /* 114x114-logo.png */; };
+		77F5102B163DE81000E13C96 /* 57x57-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 77F5102A163DE81000E13C96 /* 57x57-logo.png */; };
+		77F51039163DEAFD00E13C96 /* ezPollUserLocal.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F51038163DEAFD00E13C96 /* ezPollUserLocal.m */; };
+		77F5103C163DEEF100E13C96 /* ezPollData.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F5103B163DEEF100E13C96 /* ezPollData.m */; };
+		77F51040163DF33600E13C96 /* userIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 77F5103F163DF33600E13C96 /* userIcon.png */; };
+		77F51042163DF46300E13C96 /* ezPollLogoImages.png in Resources */ = {isa = PBXBuildFile; fileRef = 77F51041163DF46300E13C96 /* ezPollLogoImages.png */; };
+		77F51045163DF8EE00E13C96 /* ezPollDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F51044163DF8EE00E13C96 /* ezPollDataViewController.m */; };
+		77F51047163DFEB900E13C96 /* polliconSmallTab.png in Resources */ = {isa = PBXBuildFile; fileRef = 77F51046163DFEB900E13C96 /* polliconSmallTab.png */; };
+		77F5104B163E028A00E13C96 /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 77F5104A163E028A00E13C96 /* Background.png */; };
+		77F5104D163E068F00E13C96 /* LogoezPollImage-441x441.png in Resources */ = {isa = PBXBuildFile; fileRef = 77F5104C163E068F00E13C96 /* LogoezPollImage-441x441.png */; };
+		77F51051163E075D00E13C96 /* Trans_LogoezPollImage-441x441.png in Resources */ = {isa = PBXBuildFile; fileRef = 77F51050163E075D00E13C96 /* Trans_LogoezPollImage-441x441.png */; };
+		77F51059163E121900E13C96 /* itsReallyeazy.png in Resources */ = {isa = PBXBuildFile; fileRef = 77F51058163E121900E13C96 /* itsReallyeazy.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		771A143F163ED920003CB83B /* userDataAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = userDataAccess.h; sourceTree = "<group>"; };
+		771A1440163ED920003CB83B /* userDataAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = userDataAccess.m; sourceTree = "<group>"; };
+		77330DBB163E17490042CF43 /* ezPollUserEditTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ezPollUserEditTableController.h; sourceTree = "<group>"; };
+		77330DBC163E17490042CF43 /* ezPollUserEditTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ezPollUserEditTableController.m; sourceTree = "<group>"; };
+		774BB4671655D24900F518A1 /* ezPollcreatePollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ezPollcreatePollViewController.h; sourceTree = "<group>"; };
+		774BB4681655D24900F518A1 /* ezPollcreatePollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ezPollcreatePollViewController.m; sourceTree = "<group>"; };
+		774BB46D1655D6F500F518A1 /* ezPollCreateProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ezPollCreateProtocol.h; sourceTree = "<group>"; };
+		777DDD78163F6B86009A9647 /* ezPollAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ezPollAboutViewController.h; sourceTree = "<group>"; };
+		777DDD79163F6B86009A9647 /* ezPollAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ezPollAboutViewController.m; sourceTree = "<group>"; };
+		77B5A3C2163E3C6E00990590 /* upperBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = upperBackground.png; sourceTree = "<group>"; };
+		77B5A3C7163E3D9200990590 /* LowerBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LowerBackground.png; sourceTree = "<group>"; };
+		77CFB855163F5414004E6FFA /* DismissModalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DismissModalView.h; sourceTree = "<group>"; };
+		77D19FFD163ED23000FBED30 /* saveButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = saveButton.png; sourceTree = "<group>"; };
 		77F51001163DE7FC00E13C96 /* ezPoll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ezPoll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77F51005163DE7FC00E13C96 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		77F51007163DE7FC00E13C96 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -35,8 +67,23 @@
 		77F51019163DE7FC00E13C96 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		77F5101B163DE7FC00E13C96 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		77F5101E163DE7FC00E13C96 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		77F51020163DE7FC00E13C96 /* ezPollViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ezPollViewController.h; sourceTree = "<group>"; };
-		77F51021163DE7FC00E13C96 /* ezPollViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ezPollViewController.m; sourceTree = "<group>"; };
+		77F51020163DE7FC00E13C96 /* ezPollUserViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ezPollUserViewController.h; sourceTree = "<group>"; };
+		77F51021163DE7FC00E13C96 /* ezPollUserViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ezPollUserViewController.m; sourceTree = "<group>"; };
+		77F51028163DE80900E13C96 /* 114x114-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "114x114-logo.png"; sourceTree = "<group>"; };
+		77F5102A163DE81000E13C96 /* 57x57-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "57x57-logo.png"; sourceTree = "<group>"; };
+		77F51037163DEAFD00E13C96 /* ezPollUserLocal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ezPollUserLocal.h; sourceTree = "<group>"; };
+		77F51038163DEAFD00E13C96 /* ezPollUserLocal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ezPollUserLocal.m; sourceTree = "<group>"; };
+		77F5103A163DEEF100E13C96 /* ezPollData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ezPollData.h; sourceTree = "<group>"; };
+		77F5103B163DEEF100E13C96 /* ezPollData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ezPollData.m; sourceTree = "<group>"; };
+		77F5103F163DF33600E13C96 /* userIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = userIcon.png; sourceTree = "<group>"; };
+		77F51041163DF46300E13C96 /* ezPollLogoImages.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ezPollLogoImages.png; sourceTree = "<group>"; };
+		77F51043163DF8EE00E13C96 /* ezPollDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ezPollDataViewController.h; sourceTree = "<group>"; };
+		77F51044163DF8EE00E13C96 /* ezPollDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ezPollDataViewController.m; sourceTree = "<group>"; };
+		77F51046163DFEB900E13C96 /* polliconSmallTab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = polliconSmallTab.png; sourceTree = "<group>"; };
+		77F5104A163E028A00E13C96 /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background.png; sourceTree = "<group>"; };
+		77F5104C163E068F00E13C96 /* LogoezPollImage-441x441.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LogoezPollImage-441x441.png"; sourceTree = "<group>"; };
+		77F51050163E075D00E13C96 /* Trans_LogoezPollImage-441x441.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Trans_LogoezPollImage-441x441.png"; sourceTree = "<group>"; };
+		77F51058163E121900E13C96 /* itsReallyeazy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = itsReallyeazy.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +100,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		771A143D163ED8F9003CB83B /* UserDataAccess */ = {
+			isa = PBXGroup;
+			children = (
+				771A143F163ED920003CB83B /* userDataAccess.h */,
+				771A1440163ED920003CB83B /* userDataAccess.m */,
+			);
+			name = UserDataAccess;
+			sourceTree = "<group>";
+		};
 		77F50FF6163DE7FC00E13C96 = {
 			isa = PBXGroup;
 			children = (
@@ -83,11 +139,11 @@
 		77F5100B163DE7FC00E13C96 /* ezPoll */ = {
 			isa = PBXGroup;
 			children = (
-				77F51014163DE7FC00E13C96 /* ezPollAppDelegate.h */,
-				77F51015163DE7FC00E13C96 /* ezPollAppDelegate.m */,
-				77F5101D163DE7FC00E13C96 /* MainStoryboard.storyboard */,
-				77F51020163DE7FC00E13C96 /* ezPollViewController.h */,
-				77F51021163DE7FC00E13C96 /* ezPollViewController.m */,
+				77F51032163DE95C00E13C96 /* Protocols */,
+				77F51031163DE94C00E13C96 /* Delegates */,
+				77F51030163DE91000E13C96 /* Models */,
+				77F5102E163DE8F900E13C96 /* Controllers */,
+				77F5102D163DE8F300E13C96 /* Views */,
 				77F5100C163DE7FC00E13C96 /* Supporting Files */,
 			);
 			path = ezPoll;
@@ -96,6 +152,7 @@
 		77F5100C163DE7FC00E13C96 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				77F5102C163DE8D200E13C96 /* Images */,
 				77F5100D163DE7FC00E13C96 /* ezPoll-Info.plist */,
 				77F5100E163DE7FC00E13C96 /* InfoPlist.strings */,
 				77F51011163DE7FC00E13C96 /* main.m */,
@@ -105,6 +162,81 @@
 				77F5101B163DE7FC00E13C96 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		77F5102C163DE8D200E13C96 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				77F51050163E075D00E13C96 /* Trans_LogoezPollImage-441x441.png */,
+				77F5104C163E068F00E13C96 /* LogoezPollImage-441x441.png */,
+				77F5104A163E028A00E13C96 /* Background.png */,
+				77B5A3C2163E3C6E00990590 /* upperBackground.png */,
+				77F51046163DFEB900E13C96 /* polliconSmallTab.png */,
+				77F51058163E121900E13C96 /* itsReallyeazy.png */,
+				77D19FFD163ED23000FBED30 /* saveButton.png */,
+				77B5A3C7163E3D9200990590 /* LowerBackground.png */,
+				77F51041163DF46300E13C96 /* ezPollLogoImages.png */,
+				77F5103F163DF33600E13C96 /* userIcon.png */,
+				77F5102A163DE81000E13C96 /* 57x57-logo.png */,
+				77F51028163DE80900E13C96 /* 114x114-logo.png */,
+			);
+			name = Images;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		77F5102D163DE8F300E13C96 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				77F5101D163DE7FC00E13C96 /* MainStoryboard.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		77F5102E163DE8F900E13C96 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				77F51020163DE7FC00E13C96 /* ezPollUserViewController.h */,
+				77F51021163DE7FC00E13C96 /* ezPollUserViewController.m */,
+				77F51043163DF8EE00E13C96 /* ezPollDataViewController.h */,
+				77F51044163DF8EE00E13C96 /* ezPollDataViewController.m */,
+				77330DBB163E17490042CF43 /* ezPollUserEditTableController.h */,
+				77330DBC163E17490042CF43 /* ezPollUserEditTableController.m */,
+				777DDD78163F6B86009A9647 /* ezPollAboutViewController.h */,
+				777DDD79163F6B86009A9647 /* ezPollAboutViewController.m */,
+				774BB4671655D24900F518A1 /* ezPollcreatePollViewController.h */,
+				774BB4681655D24900F518A1 /* ezPollcreatePollViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		77F51030163DE91000E13C96 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				771A143D163ED8F9003CB83B /* UserDataAccess */,
+				77F51037163DEAFD00E13C96 /* ezPollUserLocal.h */,
+				77F51038163DEAFD00E13C96 /* ezPollUserLocal.m */,
+				77F5103A163DEEF100E13C96 /* ezPollData.h */,
+				77F5103B163DEEF100E13C96 /* ezPollData.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		77F51031163DE94C00E13C96 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				77F51014163DE7FC00E13C96 /* ezPollAppDelegate.h */,
+				77F51015163DE7FC00E13C96 /* ezPollAppDelegate.m */,
+			);
+			name = Delegates;
+			sourceTree = "<group>";
+		};
+		77F51032163DE95C00E13C96 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				77CFB855163F5414004E6FFA /* DismissModalView.h */,
+				774BB46D1655D6F500F518A1 /* ezPollCreateProtocol.h */,
+			);
+			name = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +296,18 @@
 				77F5101A163DE7FC00E13C96 /* Default@2x.png in Resources */,
 				77F5101C163DE7FC00E13C96 /* Default-568h@2x.png in Resources */,
 				77F5101F163DE7FC00E13C96 /* MainStoryboard.storyboard in Resources */,
+				77F51029163DE80900E13C96 /* 114x114-logo.png in Resources */,
+				77F5102B163DE81000E13C96 /* 57x57-logo.png in Resources */,
+				77F51040163DF33600E13C96 /* userIcon.png in Resources */,
+				77F51042163DF46300E13C96 /* ezPollLogoImages.png in Resources */,
+				77F51047163DFEB900E13C96 /* polliconSmallTab.png in Resources */,
+				77F5104B163E028A00E13C96 /* Background.png in Resources */,
+				77F5104D163E068F00E13C96 /* LogoezPollImage-441x441.png in Resources */,
+				77F51051163E075D00E13C96 /* Trans_LogoezPollImage-441x441.png in Resources */,
+				77F51059163E121900E13C96 /* itsReallyeazy.png in Resources */,
+				77B5A3C3163E3C6E00990590 /* upperBackground.png in Resources */,
+				77B5A3C8163E3D9200990590 /* LowerBackground.png in Resources */,
+				77D19FFE163ED23000FBED30 /* saveButton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,7 +320,14 @@
 			files = (
 				77F51012163DE7FC00E13C96 /* main.m in Sources */,
 				77F51016163DE7FC00E13C96 /* ezPollAppDelegate.m in Sources */,
-				77F51022163DE7FC00E13C96 /* ezPollViewController.m in Sources */,
+				77F51022163DE7FC00E13C96 /* ezPollUserViewController.m in Sources */,
+				77F51039163DEAFD00E13C96 /* ezPollUserLocal.m in Sources */,
+				77F5103C163DEEF100E13C96 /* ezPollData.m in Sources */,
+				77F51045163DF8EE00E13C96 /* ezPollDataViewController.m in Sources */,
+				77330DBD163E17490042CF43 /* ezPollUserEditTableController.m in Sources */,
+				771A1441163ED920003CB83B /* userDataAccess.m in Sources */,
+				777DDD7A163F6B86009A9647 /* ezPollAboutViewController.m in Sources */,
+				774BB4691655D24900F518A1 /* ezPollcreatePollViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +444,7 @@
 				77F51027163DE7FC00E13C96 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

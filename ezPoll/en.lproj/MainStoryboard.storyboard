@@ -1,26 +1,593 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C3006" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="n3R-yx-d1s">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
-        <scene sceneID="5">
+        <!--Ez Poll Data View Controller - Your Polls-->
+        <scene sceneID="AB1-Ok-k4V">
             <objects>
-                <viewController id="2" customClass="ezPollViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3">
+                <tableViewController id="kpT-VM-Yc0" customClass="ezPollDataViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="l3e-cr-PPB">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="pollCell" textLabel="upr-vQ-hlU" style="IBUITableViewCellStyleDefault" id="h1t-lm-h47">
+                                <rect key="frame" x="0.0" y="46" width="320" height="46"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="10" y="1" width="280" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upr-vQ-hlU">
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Your Polls" id="4z4-iL-jNm">
+                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="dpP-am-BtE">
+                            <connections>
+                                <segue destination="X6Z-0T-Kaw" kind="modal" id="WdL-sX-7yJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9jM-oW-NUt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="658" y="-240"/>
+        </scene>
+        <!--Ez Pollcreate Poll View Controller - Create a Poll-->
+        <scene sceneID="LlL-dk-frD">
+            <objects>
+                <tableViewController id="tUZ-Fc-chS" customClass="ezPollcreatePollViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="otp-ac-Vzb">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="newPoll" id="OXS-Iv-Mcg">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="tUZ-Fc-chS" id="lEe-pX-PLd"/>
+                            <outlet property="delegate" destination="tUZ-Fc-chS" id="UDp-tI-o72"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Create a Poll" id="CnO-8e-CmI">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="ky6-7o-51R"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="TKT-nJ-vWX"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fc2-yb-Zy4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1617" y="-204"/>
+        </scene>
+        <!--Navigation Controller - Polls-->
+        <scene sceneID="Mg6-4H-PBA">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="rAN-Ro-y5K" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Polls" image="polliconSmallTab.png" id="Zm1-Gf-MOu"/>
+                    <navigationItem key="navigationItem" id="dn0-qv-Gz6"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="V8t-0f-ksw">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="kpT-VM-Yc0" kind="relationship" relationship="rootViewController" id="dGM-h0-yIt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k82-gv-JDz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="250" y="-205"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="E2p-Yi-rlm">
+            <objects>
+                <tabBarController id="n3R-yx-d1s" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Ba9-uA-hlz">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="IZd-wP-UnI" kind="relationship" relationship="viewControllers" id="jGW-rJ-WZJ"/>
+                        <segue destination="rAN-Ro-y5K" kind="relationship" relationship="viewControllers" id="2b5-vm-Ejg"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pie-9a-Jcb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-448" y="-495"/>
+        </scene>
+        <!--Ez Poll User View Controller - Profile-->
+        <scene sceneID="eUu-bG-3VZ">
+            <objects>
+                <viewController id="IZd-wP-UnI" customClass="ezPollUserViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="adU-Ci-Qgc">
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="Pbm-sa-veE">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Trans_LogoezPollImage-441x441.png" translatesAutoresizingMaskIntoConstraints="NO" id="xwi-Sa-zWY">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="159" id="87p-yz-pGU"/>
+                                    <constraint firstAttribute="width" constant="184" id="zgI-zR-gBC"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Deepak Vokaliga" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvJ-kR-nRR">
+                                <color key="backgroundColor" red="0.81044722576530615" green="0.25500105802697681" blue="0.29258108204739375" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="314" id="Pgz-EX-IKL"/>
+                                    <constraint firstAttribute="height" constant="36" id="bs8-85-2Wu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Nick Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0iN-ok-jAF">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="287" id="ukO-2o-Bfy"/>
+                                    <constraint firstAttribute="height" constant="36" id="use-gb-GMh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Polls: 20" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K96-ky-YgE">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="6Rg-aF-3h8"/>
+                                    <constraint firstAttribute="width" constant="166" id="9bC-Sn-Zvx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="leb-cp-w36">
+                                <items>
+                                    <navigationItem title="ezPoll" id="yaF-dZ-guX">
+                                        <barButtonItem key="leftBarButtonItem" id="7fQ-DQ-ib0">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="LU5-qa-fla">
+                                                <rect key="frame" x="5" y="11" width="18" height="20"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="bFK-9Y-MEA" kind="modal" identifier="aboutModalInfo" modalTransitionStyle="flipHorizontal" id="9Mz-Rs-OK6"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="Pcn-2b-gMk">
+                                            <connections>
+                                                <segue destination="7Nu-bG-gxp" kind="modal" identifier="UserEditModalInfo" modalTransitionStyle="flipHorizontal" id="N3l-Ck-hDE"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="itsReallyeazy.png" translatesAutoresizingMaskIntoConstraints="NO" id="efM-tb-lBm">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="219" id="UXg-UV-145"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Pbm-sa-veE" firstAttribute="trailing" secondItem="adU-Ci-Qgc" secondAttribute="trailing" type="default" id="12f-on-W99"/>
+                            <constraint firstItem="Pbm-sa-veE" firstAttribute="top" secondItem="adU-Ci-Qgc" secondAttribute="top" type="default" id="1bK-dS-N4Z"/>
+                            <constraint firstItem="0iN-ok-jAF" firstAttribute="top" secondItem="adU-Ci-Qgc" secondAttribute="top" constant="72" id="2WI-bK-TUj"/>
+                            <constraint firstItem="xwi-Sa-zWY" firstAttribute="top" secondItem="adU-Ci-Qgc" secondAttribute="top" constant="138" id="3vo-K0-ORU"/>
+                            <constraint firstItem="leb-cp-w36" firstAttribute="trailing" secondItem="adU-Ci-Qgc" secondAttribute="trailing" type="default" id="7MF-lE-hvt"/>
+                            <constraint firstItem="K96-ky-YgE" firstAttribute="leading" secondItem="adU-Ci-Qgc" secondAttribute="leading" constant="195" id="AEw-ZL-iA2"/>
+                            <constraint firstAttribute="bottom" secondItem="efM-tb-lBm" secondAttribute="bottom" constant="74" id="C3B-Cy-PCV"/>
+                            <constraint firstItem="xwi-Sa-zWY" firstAttribute="leading" secondItem="adU-Ci-Qgc" secondAttribute="leading" constant="61" id="FQE-5j-7Na"/>
+                            <constraint firstItem="leb-cp-w36" firstAttribute="leading" secondItem="adU-Ci-Qgc" secondAttribute="leading" type="default" id="GOV-Fe-NXA"/>
+                            <constraint firstAttribute="bottom" secondItem="fvJ-kR-nRR" secondAttribute="bottom" constant="2" id="Ihk-FD-rIE"/>
+                            <constraint firstItem="0iN-ok-jAF" firstAttribute="leading" secondItem="adU-Ci-Qgc" secondAttribute="leading" constant="27" id="OMc-qi-1vb"/>
+                            <constraint firstItem="leb-cp-w36" firstAttribute="top" secondItem="adU-Ci-Qgc" secondAttribute="top" type="default" id="U05-jX-ao4"/>
+                            <constraint firstItem="efM-tb-lBm" firstAttribute="leading" secondItem="adU-Ci-Qgc" secondAttribute="leading" constant="68" id="gN4-Gp-nrf"/>
+                            <constraint firstItem="Pbm-sa-veE" firstAttribute="bottom" secondItem="adU-Ci-Qgc" secondAttribute="bottom" type="default" id="pW7-Gu-xZP"/>
+                            <constraint firstItem="Pbm-sa-veE" firstAttribute="leading" secondItem="adU-Ci-Qgc" secondAttribute="leading" type="default" id="rOT-XQ-IPD"/>
+                            <constraint firstItem="fvJ-kR-nRR" firstAttribute="trailing" secondItem="adU-Ci-Qgc" secondAttribute="trailing" type="default" id="us0-3q-esG"/>
+                            <constraint firstItem="K96-ky-YgE" firstAttribute="top" secondItem="adU-Ci-Qgc" secondAttribute="top" constant="109" id="x4e-Qo-wSS"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="userIcon.png" id="eut-lj-SMj"/>
+                    <connections>
+                        <outlet property="fullNameLabel" destination="fvJ-kR-nRR" id="ERb-Fh-euQ"/>
+                        <outlet property="nickNameLabel" destination="0iN-ok-jAF" id="Imn-k5-G0p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JEK-Xy-Era" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130" y="-1039"/>
+        </scene>
+        <!--Ez Poll User Edit Table Controller-->
+        <scene sceneID="AOL-d2-YYs">
+            <objects>
+                <tableViewController id="7Nu-bG-gxp" customClass="ezPollUserEditTableController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="jCW-Gi-eRv">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.8803013392857143" green="0.174123676342266" blue="0.19535925764208315" alpha="1" colorSpace="calibratedRGB"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="PEx-DL-SA7" customClass="UIControl">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="96"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <navigationBar contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="exQ-RJ-WSH">
+                                    <items>
+                                        <navigationItem title="Update" id="7qY-vs-9e0">
+                                            <barButtonItem key="leftBarButtonItem" title="Back" id="4oF-WJ-ZOJ">
+                                                <connections>
+                                                    <action selector="backToDismissEditUserModalView" destination="7Nu-bG-gxp" id="wxp-q8-7LV"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </navigationItem>
+                                    </items>
+                                </navigationBar>
+                            </subviews>
+                            <color key="backgroundColor" red="0.88030133929999999" green="0.2726841545749622" blue="0.29702048218717408" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstItem="exQ-RJ-WSH" firstAttribute="trailing" secondItem="PEx-DL-SA7" secondAttribute="trailing" type="default" id="71Y-Ac-r7N"/>
+                                <constraint firstItem="exQ-RJ-WSH" firstAttribute="leading" secondItem="PEx-DL-SA7" secondAttribute="leading" type="default" id="8mO-IU-mjL"/>
+                                <constraint firstItem="exQ-RJ-WSH" firstAttribute="top" secondItem="PEx-DL-SA7" secondAttribute="top" type="default" id="CaS-60-0nZ"/>
+                            </constraints>
+                            <connections>
+                                <action selector="backgroundTouch:" destination="7Nu-bG-gxp" eventType="touchDown" id="LF4-JM-4Lh"/>
+                            </connections>
+                        </view>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="Cug-HN-nRb" customClass="UIControl">
+                            <rect key="frame" x="0.0" y="355" width="320" height="95"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.78079161352040816" green="0.25700564635029338" blue="0.27395436846717175" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="backgroundTouch:" destination="7Nu-bG-gxp" eventType="touchDown" id="k3s-38-RkE"/>
+                            </connections>
+                        </view>
+                        <sections>
+                            <tableViewSection id="kaa-4e-ZSu">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="SzP-fv-3XS">
+                                        <rect key="frame" x="0.0" y="106" width="320" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" contentMode="left" text="NickName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ht4-Gs-tHx">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="79" id="A5N-uQ-odz"/>
+                                                        <constraint firstAttribute="height" constant="21" id="Ebq-AC-hjm"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="14"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="NickName" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hQf-GL-sUZ">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="176" id="VKQ-nm-X2C"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="13"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                    <connections>
+                                                        <action selector="backgroundTouch:" destination="7Nu-bG-gxp" eventType="editingDidEnd" id="2hJ-JH-8eN"/>
+                                                        <action selector="exitKeyboardonDone:" destination="7Nu-bG-gxp" eventType="editingDidEndOnExit" id="8vn-9a-RaH"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="Ht4-Gs-tHx" firstAttribute="leading" secondItem="SzP-fv-3XS" secondAttribute="leading" constant="30" id="Kde-sN-KQ1"/>
+                                            <constraint firstAttribute="trailing" secondItem="hQf-GL-sUZ" secondAttribute="trailing" constant="20" type="default" id="NQD-m6-HAX"/>
+                                            <constraint firstItem="hQf-GL-sUZ" firstAttribute="centerY" secondItem="Ht4-Gs-tHx" secondAttribute="centerY" type="default" id="joj-2o-IsQ"/>
+                                            <constraint firstItem="hQf-GL-sUZ" firstAttribute="top" secondItem="SzP-fv-3XS" secondAttribute="top" constant="8" id="qTp-EL-VdK"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="HU5-DF-tVu">
+                                        <rect key="frame" x="0.0" y="151" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="0.0" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" contentMode="left" text="FirstName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Fh-Wl-HNR">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="YTW-Kz-nBd"/>
+                                                        <constraint firstAttribute="width" constant="79" id="ehe-J0-fDT"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="14"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zhk-Cg-OtH">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="175" id="z3e-Z2-4QI"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                    <connections>
+                                                        <action selector="backgroundTouch:" destination="7Nu-bG-gxp" eventType="editingDidEnd" id="MYg-Bj-UcJ"/>
+                                                        <action selector="exitKeyboardonDone:" destination="7Nu-bG-gxp" eventType="editingDidEndOnExit" id="w08-7e-Ll7"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="Zhk-Cg-OtH" firstAttribute="leading" secondItem="HU5-DF-tVu" secondAttribute="leading" constant="123" id="WoL-dA-KQ0"/>
+                                            <constraint firstItem="2Fh-Wl-HNR" firstAttribute="top" secondItem="HU5-DF-tVu" secondAttribute="top" constant="11" id="ZkA-dW-Afu"/>
+                                            <constraint firstItem="Zhk-Cg-OtH" firstAttribute="centerY" secondItem="HU5-DF-tVu" secondAttribute="centerY" type="default" id="eWp-NG-Jq1"/>
+                                            <constraint firstItem="2Fh-Wl-HNR" firstAttribute="leading" secondItem="HU5-DF-tVu" secondAttribute="leading" constant="30" id="qUN-6U-B2j"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="WNg-Ri-DcM">
+                                        <rect key="frame" x="0.0" y="195" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="0.0" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" contentMode="left" text="LastName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tsu-QX-hB7">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="78" id="bT9-wS-kjR"/>
+                                                        <constraint firstAttribute="height" constant="21" id="w11-KC-quI"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="14"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WxZ-Hy-IEu">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="175" id="0It-9o-VJa"/>
+                                                        <constraint firstAttribute="height" constant="30" id="RhN-HK-9PC"/>
+                                                    </constraints>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="13"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                    <connections>
+                                                        <action selector="backgroundTouch:" destination="7Nu-bG-gxp" eventType="editingDidEnd" id="ykW-4Y-i2F"/>
+                                                        <action selector="exitKeyboardonDone:" destination="7Nu-bG-gxp" eventType="editingDidEndOnExit" id="sEZ-TG-9sH"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="WxZ-Hy-IEu" firstAttribute="leading" secondItem="WNg-Ri-DcM" secondAttribute="leading" constant="124" id="2T6-z3-wHC"/>
+                                            <constraint firstItem="Tsu-QX-hB7" firstAttribute="leading" secondItem="WNg-Ri-DcM" secondAttribute="leading" constant="30" id="HrJ-rf-PXZ"/>
+                                            <constraint firstItem="Tsu-QX-hB7" firstAttribute="baseline" secondItem="WxZ-Hy-IEu" secondAttribute="baseline" type="default" id="WIh-ls-ROj"/>
+                                            <constraint firstItem="Tsu-QX-hB7" firstAttribute="top" secondItem="WNg-Ri-DcM" secondAttribute="top" constant="11" id="m3N-eN-m2n"/>
+                                            <constraint firstItem="WxZ-Hy-IEu" firstAttribute="top" secondItem="WNg-Ri-DcM" secondAttribute="top" constant="8" id="reV-Hf-OTD"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="105" id="Vj1-io-Waw">
+                                        <rect key="frame" x="0.0" y="239" width="320" height="106"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="0.0" width="300" height="104"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" contentMode="left" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4re-Ss-Hh1">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="8PI-Kf-LAD"/>
+                                                        <constraint firstAttribute="width" constant="78" id="xFc-Ef-BGb"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="14"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Orc-cR-Out">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="d24-je-ccx"/>
+                                                        <constraint firstAttribute="width" constant="175" id="uAe-pG-c3c"/>
+                                                    </constraints>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="13"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                    <connections>
+                                                        <action selector="backgroundTouch:" destination="7Nu-bG-gxp" eventType="editingDidEnd" id="Oad-8x-qqX"/>
+                                                        <action selector="exitKeyboardonDone:" destination="7Nu-bG-gxp" eventType="editingDidEndOnExit" id="eqF-1x-aQS"/>
+                                                    </connections>
+                                                </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TiV-Dm-Vf3">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="115" id="0N1-a1-3a8"/>
+                                                        <constraint firstAttribute="height" constant="45" id="mB6-F4-qU9"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <state key="normal" title="Button" image="saveButton.png" backgroundImage="saveButton.png">
+                                                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="highlighted">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="UserEditSaveButton:" destination="7Nu-bG-gxp" eventType="touchUpInside" id="Qss-PW-a1h"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="TiV-Dm-Vf3" secondAttribute="bottom" constant="8" id="3Tq-ba-lUf"/>
+                                            <constraint firstItem="4re-Ss-Hh1" firstAttribute="baseline" secondItem="Orc-cR-Out" secondAttribute="baseline" type="default" id="6sm-pi-mnX"/>
+                                            <constraint firstItem="Orc-cR-Out" firstAttribute="leading" secondItem="Vj1-io-Waw" secondAttribute="leading" constant="124" id="Eb7-66-kSs"/>
+                                            <constraint firstItem="4re-Ss-Hh1" firstAttribute="top" secondItem="Vj1-io-Waw" secondAttribute="top" constant="11" id="PeV-re-38O"/>
+                                            <constraint firstItem="TiV-Dm-Vf3" firstAttribute="leading" secondItem="Vj1-io-Waw" secondAttribute="leading" constant="104" id="UPo-85-Nq0"/>
+                                            <constraint firstItem="Orc-cR-Out" firstAttribute="top" secondItem="Vj1-io-Waw" secondAttribute="top" constant="8" id="jHu-FM-FzL"/>
+                                            <constraint firstItem="4re-Ss-Hh1" firstAttribute="leading" secondItem="Vj1-io-Waw" secondAttribute="leading" constant="30" id="kQT-5Y-UoZ"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                    </tableView>
+                    <connections>
+                        <outlet property="emailText" destination="Orc-cR-Out" id="CDO-wP-dPn"/>
+                        <outlet property="firstNameText" destination="Zhk-Cg-OtH" id="4Hs-ot-gcO"/>
+                        <outlet property="lastNameText" destination="WxZ-Hy-IEu" id="542-22-lgc"/>
+                        <outlet property="nickNameText" destination="hQf-GL-sUZ" id="co5-MI-SPe"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dWc-sl-SIv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="676" y="-1034"/>
+        </scene>
+        <!--Ez Poll About View Controller - Profile-->
+        <scene sceneID="urh-9F-X0A">
+            <objects>
+                <viewController id="bFK-9Y-MEA" customClass="ezPollAboutViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wTG-2K-jfK">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="OxM-Ya-Skm">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Trans_LogoezPollImage-441x441.png" translatesAutoresizingMaskIntoConstraints="NO" id="zls-2c-Eke">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="159" id="TlG-uS-xn4"/>
+                                    <constraint firstAttribute="width" constant="184" id="Udd-Ma-7nb"/>
+                                </constraints>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="3Gq-13-98a">
+                                <items>
+                                    <navigationItem title="About ezPoll" id="I1G-Zn-qGR">
+                                        <barButtonItem key="rightBarButtonItem" title="Done" id="KEP-d5-j78">
+                                            <connections>
+                                                <action selector="backToDismissEditUserModalView" destination="bFK-9Y-MEA" id="NOw-qh-Mhn"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="itsReallyeazy.png" translatesAutoresizingMaskIntoConstraints="NO" id="p6E-yy-bPK">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="219" id="nid-hh-zeU"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ezPoll.vokaliga.com" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I9a-zF-lJo">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Gh1-3N-s28"/>
+                                    <constraint firstAttribute="width" constant="313" id="XTF-aR-SCF"/>
+                                </constraints>
+                                <color key="textColor" red="0.40000000596046448" green="0.80000001192092896" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="p6E-yy-bPK" secondAttribute="bottom" constant="43" id="0WM-lI-BEq"/>
+                            <constraint firstItem="3Gq-13-98a" firstAttribute="top" secondItem="wTG-2K-jfK" secondAttribute="top" type="default" id="84e-Sf-L1Y"/>
+                            <constraint firstItem="3Gq-13-98a" firstAttribute="trailing" secondItem="wTG-2K-jfK" secondAttribute="trailing" type="default" id="9Kc-S6-lpu"/>
+                            <constraint firstItem="zls-2c-Eke" firstAttribute="leading" secondItem="p6E-yy-bPK" secondAttribute="leading" type="default" id="DWn-bh-lSy"/>
+                            <constraint firstItem="I9a-zF-lJo" firstAttribute="trailing" secondItem="wTG-2K-jfK" secondAttribute="trailing" type="default" id="Dwm-2u-bWW"/>
+                            <constraint firstAttribute="bottom" secondItem="I9a-zF-lJo" secondAttribute="bottom" constant="11" id="EBU-Ab-xht"/>
+                            <constraint firstItem="OxM-Ya-Skm" firstAttribute="leading" secondItem="wTG-2K-jfK" secondAttribute="leading" type="default" id="FnQ-LM-Gck"/>
+                            <constraint firstItem="zls-2c-Eke" firstAttribute="top" secondItem="wTG-2K-jfK" secondAttribute="top" constant="218" id="I8q-qH-1ei"/>
+                            <constraint firstItem="zls-2c-Eke" firstAttribute="leading" secondItem="wTG-2K-jfK" secondAttribute="leading" constant="61" id="RV2-nu-boJ"/>
+                            <constraint firstItem="OxM-Ya-Skm" firstAttribute="top" secondItem="wTG-2K-jfK" secondAttribute="top" type="default" id="Rda-Bk-bKY"/>
+                            <constraint firstItem="OxM-Ya-Skm" firstAttribute="trailing" secondItem="wTG-2K-jfK" secondAttribute="trailing" type="default" id="WGv-3e-bed"/>
+                            <constraint firstItem="3Gq-13-98a" firstAttribute="leading" secondItem="wTG-2K-jfK" secondAttribute="leading" type="default" id="aZZ-dD-ueg"/>
+                            <constraint firstItem="OxM-Ya-Skm" firstAttribute="bottom" secondItem="wTG-2K-jfK" secondAttribute="bottom" type="default" id="x7Q-vE-Pka"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="userIcon.png" id="CRi-6S-yrq"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aM2-fb-Rgj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="664" y="-1617"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="l3Q-8w-aTK">
+            <objects>
+                <navigationController id="X6Z-0T-Kaw" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FgZ-o5-uDl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tUZ-Fc-chS" kind="relationship" relationship="rootViewController" id="slz-uj-GCc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vZl-js-bpr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1103" y="-196"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Background.png" width="478" height="477"/>
+        <image name="Trans_LogoezPollImage-441x441.png" width="441" height="441"/>
+        <image name="itsReallyeazy.png" width="223" height="62"/>
+        <image name="polliconSmallTab.png" width="37" height="42"/>
+        <image name="saveButton.png" width="249" height="101"/>
+        <image name="userIcon.png" width="32" height="40"/>
+    </resources>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ezPollAboutViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ezPollAboutViewController.h"/>
+        </class>
+        <class className="ezPollDataViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ezPollDataViewController.h"/>
+        </class>
+        <class className="ezPollUserEditTableController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ezPollUserEditTableController.h"/>
+            <relationships>
+                <relationship kind="action" name="UserEditSaveButton:"/>
+                <relationship kind="action" name="backgroundTouch:"/>
+                <relationship kind="action" name="exitKeyboardonDone:"/>
+                <relationship kind="outlet" name="emailText" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="firstNameText" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="lastNameText" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="nickNameText" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="ezPollUserViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ezPollUserViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="fullNameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="nickNameLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="ezPollcreatePollViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ezPollcreatePollViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancel:"/>
+                <relationship kind="action" name="done:"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
 </document>
